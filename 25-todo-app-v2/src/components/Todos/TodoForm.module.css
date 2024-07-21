@@ -1,0 +1,23 @@
+.todoFormContainer {
+    margin-bottom: 30px;
+}
+
+.todoFormContainer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+Выравнивание элементов во Flex контейнере
+Для центрирования элемента по перекрёстной оси (в данном случае - вертикальной) 
+используется свойство align-items. Для центрирования элемента по главной оси 
+(в данном случае - горизонтально), используется свойство justify-content.
+*/
+.todoFormContainer input {
+    width: 45%;
+    height: 30px;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
