@@ -6,6 +6,8 @@ import About from './components/About';
 import Contacts from './components/Contacts';
 import NotFound from './components/NotFound';
 import MainLayout from "./layouts/MainLayout";
+import Courses from "./components/Courses";
+import SingleCourse from "./components/SingleCourse";
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="courses/:slug" element={<SingleCourse />} />
             <Route path="*" element={<NotFound />} />
           </Route >
         </Routes>
@@ -24,5 +28,7 @@ function App() {
     </BrowserRouter >
   );
 }
-
+/*<Route path="courses/:slug" element={<SingleCourse />} />// :slug параметры пути  
+path="courses/:slug/:lang" второй параметр для маршрута
+*/
 export default App;
