@@ -38,20 +38,23 @@ const Courses = () => {
         }
     }, [sortKey, navigate]);
 
-    return <>
-        <h1>{sortKey ? `Courses sorted by ${sortKey}` : 'Courses'}</h1>
-        {sortedCourses.map((course) => (
-            <div>
-                <Link
-                    to={course.slug}
-                    /*to={course.id.toString()}*/
-                    key={course.id}
-                    className="courseLink">
-                    {course.title}
-                </Link>
-            </div>
-        ))}
-    </>;
+    return (<>
+        <p style={{ fontSize: '2.5em', marginTop: '20px', marginBottom: '20px', fontWeight: 'bolder'}}>{sortKey ? `Courses sorted by ${sortKey}` : 'Courses'}</p >
+        {
+            sortedCourses.map((course) => (
+                <div>
+                    <Link
+                        to={course.slug}
+                        /*to={course.id.toString()}*/
+                        key={course.id}
+                        className="courseLink">
+                        {course.title}
+                    </Link>
+                </div>
+                
+            ))
+        }
+    </>);
 };
 
 export default Courses;
