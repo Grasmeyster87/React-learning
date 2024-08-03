@@ -50,8 +50,7 @@ const Courses = () => {
                         className="courseLink">
                         {course.title}
                     </Link>
-                </div>
-                
+                </div>                
             ))
         }
     </>);

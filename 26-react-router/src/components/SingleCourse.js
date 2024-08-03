@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const SingleCourse = () => {
     const params = useParams();
     const navigate = useNavigate();
-  
+
     const course = courses.find((course) => course.slug === params.courseSlug);
 
     useEffect(() => {
@@ -20,7 +20,6 @@ const SingleCourse = () => {
         <h3>{course?.id}</h3>
         <Link /*to="/courses"*/ to=".." relative="path">All courses</Link>
     </>;
-
 };
 
 export default SingleCourse;
