@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
-const UserContext = createContext({
+let UserContext = createContext({
     userName: '',
-    changeUserName: () => { }
+    ChangeUserName: () => { }    
 });
 
 export default UserContext;
