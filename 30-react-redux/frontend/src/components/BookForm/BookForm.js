@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../redux/books/actionCreactors';
 import './BookForm.css';
 
 const BookForm = () => {
 
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
+    const dispatch = useDispatch();
 
     //const [formDate, setformDate] = useState({})
 
@@ -12,8 +15,12 @@ const BookForm = () => {
         e.preventDefault(); // чтобы браузер не выполнять дейстиве по умолчанию при сабмите формы
 
         if (title && author) {
-            //dispatch action
-            console.log(title, author);
+
+            const book = {
+                title: title,
+                author: author
+            };           
+            dispatch(addBook(book));            
             setTitle('');
             setAuthor(''); // сбрасуем поля 
         }
