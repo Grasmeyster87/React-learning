@@ -10,10 +10,10 @@ const BookList = () => {
             ) : (
                 <ul>
                     {books.map((book, i) => (
-                        <li key={i}>
+                        <li key={book.id}>
                             <div className="book-info">
-                                {++i}. 
-                                {book.title} by 
+                                {++i}.
+                                {book.title} by
                                 <strong>{book.author}</strong>
                             </div>
                         </li>
