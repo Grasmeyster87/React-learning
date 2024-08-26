@@ -14,14 +14,18 @@ const filterSlice = createSlice({
 
             //You can also return new state as usually
             //return {...state, title: action.payload}
+        },
+        resetFilters: (state) => {
+            //state.title = '';
+            return initialState;
         }
     }
 });
 
 //const setTitileFilter = filterSlice.actions.setTitileFilter;
 
-export const { setTitileFilter } = filterSlice.actions;
+export const { setTitileFilter, resetFilters } = filterSlice.actions;
 
-export const selectTitileFilter = (state) => state.filter.title;
+export const selectTitileFilters = (state) => state.filter.title;
 
 export default filterSlice.reducer;
