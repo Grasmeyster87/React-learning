@@ -1,6 +1,7 @@
 import BookList from './components/BookList/BookList.js';
 import BookForm from './components/BookForm/BookForm.js';
 import Filter from './components/Filter/Filter.js';
+import Error from './components/Error/Error.js';
 import './App.css';
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
           <BookForm />
         </div>
         <div className='app-right-column'>
-           <Filter />
+          <Filter />
           <BookList />
         </div>
       </main>
+      <Error />
     </div>
   );
 }

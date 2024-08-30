@@ -1,2 +1,4 @@
 npm install @reduxjs/toolkit@1.9.5 react-redux@8.1.2
+npm i uuid
 npm install axios
+npm install --save react-toastify
