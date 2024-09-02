@@ -17,6 +17,7 @@ app.get('/random-book', (req, res) => {
 });
 
 app.get('/random-book-delayed', (req, res) => {
+
     setTimeout(() => {
         res.json(getRandomBook());
     }, 2000);
