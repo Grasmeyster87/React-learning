@@ -26,12 +26,12 @@ const BookForm = () => {
             setTitle('');
             setAuthor(''); // сбрасуем поля 
         } else {
-            dispatch(setError('You must fill title and author!'))
+            dispatch(setError('You must fill title and author!'));
         }
     };
 
     const handleAddRandomBookViaAPI = () => {
-        dispatch(fetchBook());
+        dispatch(fetchBook('http://localhost:4000/random-book'));
     };
 
     return (
